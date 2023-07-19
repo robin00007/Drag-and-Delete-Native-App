@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import HorizontalScroll from "./components/HorizontalScroll";
+import DeleteCard from "./components/deleteCard";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.mainContainer}>
+        <HorizontalScroll />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "space-around",
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: "smokeWhite",
+  },
+  mainContainer: {
+    margin: 5,
+    marginTop: 30,
+    width: "100%",
+    height: "100%",
   },
 });
